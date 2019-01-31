@@ -1,3 +1,5 @@
+require 'pry'
+
 class CashRegister 
   attr_accessor :total, :discount
   
@@ -6,6 +8,7 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0
     @discount = discount
+    binding.pry
     
   end
   
