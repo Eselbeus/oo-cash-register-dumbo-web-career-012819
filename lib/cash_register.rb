@@ -28,6 +28,11 @@ class CashRegister
   
   def self.items
     @@items << @title
+    binding.pry
+    
+  end
+  
+  def void_last_transaction 
     
   end
   
