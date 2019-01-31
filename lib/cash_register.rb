@@ -1,7 +1,7 @@
 require 'pry'
 
 class CashRegister 
-  attr_accessor :total, :discount
+  attr_accessor :discount
   
   @@items = []
   
@@ -12,6 +12,10 @@ class CashRegister
     
   end
   
+  def total
+    "$#{@total.round}"
+  end
+  
   def add_item(title, price, quantity = 1)
     @total += (price * quantity)
   end
@@ -19,7 +23,7 @@ class CashRegister
   def apply_discount 
     if @discount != 0
       @total -= (@total * @discount * 0.01)
-      @total = "$#{@total.round}"
+      @total
     else
       return "There is no discount to apply."
     end
