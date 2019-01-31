@@ -37,7 +37,7 @@ class CashRegister
   
   def void_last_transaction 
     last = @items.pop
-    total -= self.price
+    total -= self.@price
     # binding.pry
     loop do 
       if last == @items[-1]
