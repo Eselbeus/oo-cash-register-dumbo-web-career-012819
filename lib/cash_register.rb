@@ -30,6 +30,7 @@ class CashRegister
   def items
     @quantity.times do 
       @@items << @title
+      binding.pry
     end
   end
   
