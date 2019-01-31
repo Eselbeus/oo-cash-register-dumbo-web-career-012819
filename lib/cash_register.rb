@@ -36,7 +36,7 @@ class CashRegister
   end
   
   def void_last_transaction
-    # total -= self.price
+    total -= self.price
     last = @items.pop
     binding.pry
     loop do 
