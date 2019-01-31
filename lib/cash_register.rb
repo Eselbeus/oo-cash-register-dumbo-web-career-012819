@@ -44,6 +44,7 @@ class CashRegister
         break
       end
     end
+    @items
   end
   
 end
