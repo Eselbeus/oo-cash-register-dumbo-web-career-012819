@@ -13,6 +13,7 @@ class CashRegister
   def add_item(title, price, quantity = 1)
     @total += (price * quantity)
     @title = title
+    @price = price
     @quantity = quantity
     @quantity.times do 
       @items << @title
@@ -36,6 +37,7 @@ class CashRegister
   
   def void_last_transaction 
     last = @items.pop
+    total -= self.price
     # binding.pry
     loop do 
       if last == @items[-1]
