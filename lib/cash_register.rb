@@ -1,6 +1,7 @@
 require 'pry'
 
 class CashRegister 
+  attr_writer :total
   attr_accessor :discount
   
   @@items = []
