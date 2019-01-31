@@ -3,7 +3,6 @@ require 'pry'
 class CashRegister 
   attr_accessor :total, :discount, :quantity, :items, :price
   
-  
   def initialize(discount = 0)
     @total = 0
     @discount = discount
@@ -38,7 +37,6 @@ class CashRegister
   def void_last_transaction
     @total -= self.price
     last = @items.pop
-    # binding.pry
     loop do 
       if last == @items[-1]
         @total -= self.price
