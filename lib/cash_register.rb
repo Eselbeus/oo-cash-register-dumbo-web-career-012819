@@ -7,7 +7,6 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0
     @discount = discount
-    # binding.pry
     @items = []
   end
   
@@ -15,7 +14,6 @@ class CashRegister
     @total += (price * quantity)
     @title = title
     @quantity = quantity
-    # binding.pry
     @quantity.times do 
       @items << @title
     end
@@ -37,10 +35,10 @@ class CashRegister
   end
   
   def void_last_transaction 
-    last = @@items.pop
+    last = @items.pop
     loop do 
-      if last == @@items[-1]
-        @@items.pop
+      if last == @items[-1]
+        @items.pop
       else
         break
       end
