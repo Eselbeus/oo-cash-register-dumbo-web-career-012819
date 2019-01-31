@@ -41,6 +41,7 @@ class CashRegister
     # binding.pry
     loop do 
       if last == @items[-1]
+        total -= @items.price
         @items.pop
       else
         break
