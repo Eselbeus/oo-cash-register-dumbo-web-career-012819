@@ -30,8 +30,8 @@ class CashRegister
   def items
     @quantity.times do 
       @@items << @title
-      # binding.pry
     end
+    @@items
   end
   
   def void_last_transaction 
