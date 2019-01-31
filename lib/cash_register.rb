@@ -27,8 +27,8 @@ class CashRegister
   end
   
   def self.items
-    @@items << @title
     binding.pry
+    @@items << @title
     
   end
   
