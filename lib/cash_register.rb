@@ -3,9 +3,9 @@ class CashRegister
   
   @@items = []
   
-  def initialize(discount = 0)
+  def initialize(apply_discount = 0)
     @total = 0
-    @discount = discount
+    @apply_discount = apply_discount
     
   end
   
@@ -14,8 +14,8 @@ class CashRegister
   end
   
   def apply_discount 
-    if @discount != 0
-      @total -= (@total * @discount)
+    if @apply_discount != 0
+      @total -= (@total * @apply_discount)
     else
       puts "There is no discount apply."
     end
