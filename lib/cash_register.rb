@@ -17,6 +17,10 @@ class CashRegister
     @title = title
     @quantity = quantity
     # binding.pry
+    @quantity.times do 
+      @@items << @title
+    end
+    @@items
   end
   
   def apply_discount 
@@ -29,9 +33,7 @@ class CashRegister
   end
   
   def items
-    @quantity.times do 
-      @@items << @title
-    end
+    
     @@items
   end
   
