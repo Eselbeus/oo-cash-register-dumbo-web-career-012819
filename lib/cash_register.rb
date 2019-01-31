@@ -1,8 +1,7 @@
 require 'pry'
 
-class CashRegister 
-  attr_writer :total
-  attr_accessor :discount
+class CashRegister
+  attr_accessor :discount :total
   
   @@items = []
   
@@ -13,9 +12,7 @@ class CashRegister
     
   end
   
-  def total
-    "$#{@total.round}"
-  end
+  
   
   def add_item(title, price, quantity = 1)
     @total += (price * quantity)
