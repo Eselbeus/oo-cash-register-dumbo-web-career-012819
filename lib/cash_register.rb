@@ -26,7 +26,7 @@ class CashRegister
     end
   end
   
-  def self.items
+  def items
     binding.pry
     @@items << @title
     
