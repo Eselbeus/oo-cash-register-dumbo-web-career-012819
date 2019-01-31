@@ -28,9 +28,9 @@ class CashRegister
   end
   
   def items
-    @quantity.times
-    @@items << @title
-    
+    @quantity.times do 
+      @@items << @title
+    end
   end
   
   def void_last_transaction 
