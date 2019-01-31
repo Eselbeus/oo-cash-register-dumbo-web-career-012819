@@ -3,7 +3,7 @@ require 'pry'
 class CashRegister 
   attr_accessor :total, :discount, :quantity
   
-  # @@items = []
+  @@items = []
   
   def initialize(discount = 0)
     @total = 0
@@ -17,7 +17,7 @@ class CashRegister
     @title = title
     @quantity = quantity
     # binding.pry
-    @@items = []
+    @@items
   end
   
   def apply_discount 
