@@ -20,7 +20,7 @@ class CashRegister
     if @discount != 0
       @total -= (@total * @discount * 0.01)
     else
-      return "There is no discount apply."
+      return "There is no discount to apply."
     end
   end
   
