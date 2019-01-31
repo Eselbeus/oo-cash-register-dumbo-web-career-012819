@@ -36,7 +36,14 @@ class CashRegister
   end
   
   def void_last_transaction 
-    
+    last = @@items.pop
+    loop do 
+      if last == @@items[-1]
+        @@items.pop
+      else
+        break
+      end
+    end
   end
   
 end
